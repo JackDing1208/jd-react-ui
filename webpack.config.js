@@ -2,10 +2,14 @@ const path= require("path")
 const HtmlWebpackPlugin = require( "html-webpack-plugin")
 
 module.exports={
+  //配置生产或开发模式，开发环境不做压缩
   mode:"development",
   //设置入口文件,路径最好加./
   entry:{
-    index:"./lib/index.ts"
+    index:"./lib/index.tsx"
+  },
+  resolve: {
+    extensions: [".ts",".tsx",".js",".jsx"]
   },
   //设置转译后文件输出的文件夹
   output:{
