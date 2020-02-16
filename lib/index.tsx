@@ -4,6 +4,6 @@ import ReactDOM from "react-dom";
 import Icon from "./icon/Icon";
 
 
-const app = document.getElementById("app");
+const root = document.getElementById("root");
 
-ReactDOM.render(<Icon name={"react"}/>, app);
+ReactDOM.render(<Icon name={"javascript"}/>, root);
