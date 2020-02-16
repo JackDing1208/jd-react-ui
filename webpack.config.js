@@ -1,5 +1,4 @@
 const path = require("path")
-const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 module.exports = {
   //设置入口文件,路径最好加./
@@ -21,6 +20,10 @@ module.exports = {
       {
         test: /\.tsx?$/,    //通过正则检查文件类型
         loader: "awesome-typescript-loader"
+      },
+      {
+        test: /\.svg$/,
+        loader: "svg-sprite-loader"
       }
     ]
   },
