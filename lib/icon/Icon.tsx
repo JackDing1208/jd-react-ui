@@ -1,6 +1,6 @@
 import React from "react";
 import "./importIcons"
-
+// import "./svg/react.svg"
 
 interface IconProps {
   name: string

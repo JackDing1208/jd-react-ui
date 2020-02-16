@@ -6,4 +6,4 @@ import Icon from "./icon/Icon";
 
 const app = document.getElementById("app");
 
-ReactDOM.render(<Icon name={"vue"}/>, app);
+ReactDOM.render(<Icon name={"react"}/>, app);
