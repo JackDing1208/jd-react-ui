@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Icon can render 1`] = `
+<svg
+  className="jd-icon"
+>
+  <use
+    xlinkHref="#react"
+  />
+</svg>
+`;
