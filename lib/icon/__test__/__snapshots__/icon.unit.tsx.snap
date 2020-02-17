@@ -9,3 +9,23 @@ exports[`Icon can render 1`] = `
   />
 </svg>
 `;
+
+exports[`Icon can render 2`] = `
+<svg
+  className="jd-icon"
+>
+  <use
+    xlinkHref="#react"
+  />
+</svg>
+`;
+
+exports[`Icon icon name is right 1`] = `
+<svg
+  className="jd-icon"
+>
+  <use
+    xlinkHref="#react"
+  />
+</svg>
+`;
