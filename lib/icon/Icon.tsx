@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.scss"
 import "./importIcons"
 // import "./svg/react.svg"
 
@@ -9,11 +10,9 @@ interface IconProps {
 
 const Icon: React.FunctionComponent<IconProps> = (props) => {
   return (
-    <span>
-      <svg>
+      <svg className={"jd-icon"}>
         <use xlinkHref={`#${props.name}`}/>
       </svg>
-    </span>
   );
 };
 

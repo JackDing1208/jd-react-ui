@@ -22,6 +22,10 @@ module.exports = {
         loader: "awesome-typescript-loader"
       },
       {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
         test: /\.svg$/,
         loader: "svg-sprite-loader"
       }
