@@ -5,7 +5,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
-
+/.idea
+*.tsx.snap
 
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
@@ -106,4 +107,3 @@ dist
 # TernJS port file
 .tern-port
 
-/.idea
