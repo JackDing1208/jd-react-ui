@@ -6,7 +6,8 @@ module.exports = Object.assign({}, base, {
   plugins: [
     //自动关联HTML用的插件
     new HtmlWebpackPlugin({
-      template: 'index.html'
+      template: 'index.html',
+      title: "Test Page"
     })
   ],
 })
