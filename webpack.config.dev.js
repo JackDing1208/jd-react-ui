@@ -1,6 +1,6 @@
 const base = require('./webpack.config')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-module.exports = Object.assign({}, base, {
+module.exports = Object.assign({}, base, {  //与基础配置进行组合
   mode: 'development',
   entry: {
     index: "./example.tsx"
