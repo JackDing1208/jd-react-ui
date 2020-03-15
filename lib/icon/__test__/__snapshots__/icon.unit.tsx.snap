@@ -3,6 +3,13 @@
 exports[`Icon can render 1`] = `
 <svg
   className="jd-icon"
+  style={
+    Object {
+      "fill": undefined,
+      "height": undefined,
+      "width": undefined,
+    }
+  }
 >
   <use
     xlinkHref="#react"

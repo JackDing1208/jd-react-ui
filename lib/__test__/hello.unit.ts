@@ -3,6 +3,6 @@ const sum = (...numbers: number[]) => {
 };
 
 
-test("jest官方测试用例 sum(1,1)===2", () => {
+test("单元测试模板 sum(1,1)===2", () => {
   expect(sum(1, 2, 3, 4)).toBe(10);
 });
