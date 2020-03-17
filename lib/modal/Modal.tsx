@@ -13,8 +13,8 @@ interface Props {
   type?: ModalType,
   content: String,
   title?: String,
-  onClose:React.MouseEventHandler
-  canModalClose?:Boolean
+  onClose: React.MouseEventHandler
+  canModalClose?: Boolean
 }
 
 
@@ -31,7 +31,6 @@ const Modal: React.FunctionComponent<Props> = (props) => {
   };
 
 
-
   const component = props.visible ?
     (
       <Fragment>
@@ -45,7 +44,7 @@ const Modal: React.FunctionComponent<Props> = (props) => {
           </footer>
         </div>
       </Fragment>
-    ):null;
+    ) : null;
 
 
   return (
@@ -58,6 +57,18 @@ Modal.defaultProps = {
   canModalClose: false
 };
 
+const alert = (content: String,) => {
+  // const div = document.createElement('div');
+  const closeModal = () => {
+
+  };
+
+  const component = (
+    <Modal visible={true} onClose={() => {closeModal();}} content={content}/>
+  );
+  ReactDOM.render(component, document.body);
+};
 
 
+export {alert,confirm};
 export default Modal;

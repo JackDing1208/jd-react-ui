@@ -17,6 +17,8 @@ function Board() {
         content={"你是煞笔么？？？"}
         canModalClose={true}
       />
+
+      <button onClick={()=>{alert("haha")}}>点我</button>
     </div>
   );
 }
