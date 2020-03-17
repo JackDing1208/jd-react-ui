@@ -19,8 +19,6 @@ interface Props {
 
 
 const Modal: React.FunctionComponent<Props> = (props) => {
-
-
   const onClickNo: React.MouseEventHandler = (e) => {
     props.onClose(e);
   };
@@ -29,8 +27,6 @@ const Modal: React.FunctionComponent<Props> = (props) => {
       props.onClose(e);
     }
   };
-
-
   const component = props.visible ?
     (
       <Fragment>
@@ -70,5 +66,8 @@ const alert = (content: String,) => {
 };
 
 
-export {alert,confirm};
+// Modal.alert =alert
+
+
+export {alert};
 export default Modal;
