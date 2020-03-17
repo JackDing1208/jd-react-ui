@@ -1,16 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 import ReactDOM from "react-dom";
-// import Button from "./Button";
-import Icon from "./lib/icon/Icon";
+import {Modal} from "./lib";
 
 const root = document.getElementById("root");
 
 function Board() {
+
+  const [visible, setVisible] = useState(false);
+
   return (
     <div style={{width: "100%", minHeight: "100vh", background: "pink"}}>
-      <Icon name={"react"}/>
+      <button onClick={() => {setVisible(true);}}>click</button>
+      <Modal
+        visible={visible}
+        onClose={() => {setVisible(false);}}
+        content={"你是煞笔么？？？"}
+        canModalClose={true}
+      />
     </div>
-
   );
 }
 
