@@ -53,21 +53,28 @@ Modal.defaultProps = {
   canModalClose: false
 };
 
-const alert = (content: String,) => {
-  // const div = document.createElement('div');
+const Alert = (content: String,) => {
+  const div = document.createElement('div');
+  document.body.append(div)
   const closeModal = () => {
-
+    // 复制一个组件，改变属性再重新渲染
+    ReactDOM.render(React.cloneElement(component, {visible: false}), div);
+    //官方推荐删除节点方法
+    ReactDOM.unmountComponentAtNode(div);
+    div.remove();
   };
 
   const component = (
     <Modal visible={true} onClose={() => {closeModal();}} content={content}/>
   );
-  ReactDOM.render(component, document.body);
+
+  //直接渲染到body下会把root节点覆盖
+  ReactDOM.render(component, div);
 };
 
 
-// Modal.alert =alert
+// Modal!.alert =alert
 
 
-export {alert};
+export {Alert};
 export default Modal;
