@@ -14,6 +14,7 @@ function Board() {
     <div style={{width: "100%", minHeight: "100vh", background: "pink"}}>
       <button onClick={() => {setVisible(true);}}>click</button>
       <Modal
+        // type={0}
         visible={visible}
         onClose={() => {setVisible(false);}}
         content={"你是煞笔么？？？"}

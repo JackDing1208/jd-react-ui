@@ -22,6 +22,8 @@ const Modal: React.FunctionComponent<Props> = (props) => {
   const onClickNo: React.MouseEventHandler = (e) => {
     props.onClose(e);
   };
+
+  console.log("type",props.type);
   const onClickModal: React.MouseEventHandler = (e) => {
     if (props.canModalClose) {
       props.onClose(e);
