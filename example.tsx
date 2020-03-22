@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import ReactDOM from "react-dom";
 import {Modal} from "./lib";
-import {Alert} from "./lib/modal/Modal"
 
 
 const root = document.getElementById("root");
@@ -21,7 +20,7 @@ function Board() {
         canModalClose={true}
       />
 
-      <button onClick={()=>{Alert("haha")}}>点我</button>
+      <button onClick={()=>{Modal.Alert("haha")}}>点我</button>
     </div>
   );
 }

@@ -17,13 +17,20 @@ interface Props {
   canModalClose?: Boolean
 }
 
+interface ComponentWithFunction extends React.FunctionComponent<Props> {
+  Alert(content:String):any
+  // Confirm:()=>void
 
-const Modal: React.FunctionComponent<Props> = (props) => {
+
+}
+
+
+const Modal: ComponentWithFunction = (props) => {
   const onClickNo: React.MouseEventHandler = (e) => {
     props.onClose(e);
   };
 
-  console.log("type",props.type);
+  console.log("type", props.type);
   const onClickModal: React.MouseEventHandler = (e) => {
     if (props.canModalClose) {
       props.onClose(e);
@@ -44,7 +51,6 @@ const Modal: React.FunctionComponent<Props> = (props) => {
       </Fragment>
     ) : null;
 
-
   return (
     ReactDOM.createPortal(component, document.body)
   );
@@ -55,9 +61,10 @@ Modal.defaultProps = {
   canModalClose: false
 };
 
+
 const Alert = (content: String,) => {
-  const div = document.createElement('div');
-  document.body.append(div)
+  const div = document.createElement("div");
+  document.body.append(div);
   const closeModal = () => {
     // 复制一个组件，改变属性再重新渲染
     ReactDOM.render(React.cloneElement(component, {visible: false}), div);
@@ -75,8 +82,7 @@ const Alert = (content: String,) => {
 };
 
 
-// Modal!.alert =alert
+Modal.Alert = Alert;
 
 
-export {Alert};
 export default Modal;
