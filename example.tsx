@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import ReactDOM from "react-dom";
-import {Modal} from "./lib";
+import {Icon, Modal,Button} from "./lib";
 
 
 const root = document.getElementById("root");
@@ -11,9 +11,15 @@ function Board() {
 
   return (
     <div style={{width: "100%", minHeight: "100vh", background: "pink"}}>
+      <Icon name={"quit"} color={"#fff"}/>
+
+      <Button onClick={()=>{
+        console.log(22222222222222)
+      }}>哈哈</Button>
+
       <button onClick={() => {setVisible(true);}}>click</button>
       <Modal
-        // type={0}
+        type={"Alert"}
         visible={visible}
         onClose={() => {setVisible(false);}}
         content={"你是煞笔么？？？"}

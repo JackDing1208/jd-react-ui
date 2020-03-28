@@ -18,7 +18,8 @@ const Icon: React.FunctionComponent<Props> = (props) => {
     <svg
       className={classes("jd-icon", className)}
       style={{width: size, height: size, fill: color}}
-      {...rest}>
+      {...rest}
+    >
       <use xlinkHref={`#${name}`}/>
     </svg>
   );

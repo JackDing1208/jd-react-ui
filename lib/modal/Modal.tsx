@@ -3,14 +3,10 @@ import ReactDOM from "react-dom";
 import "./style.scss";
 
 
-enum ModalType {
-  "Alert",
-  "Confirm",
-}
 
 interface Props {
   visible: Boolean,
-  type?: ModalType,
+  type: "Alert"|"Confirm"|"Customize"|"Input",
   content: String,
   title?: String,
   onClose: React.MouseEventHandler
@@ -18,10 +14,8 @@ interface Props {
 }
 
 interface ComponentWithFunction extends React.FunctionComponent<Props> {
-  Alert(content:String):any
+  Alert(content:String):void
   // Confirm:()=>void
-
-
 }
 
 
@@ -74,7 +68,7 @@ const Alert = (content: String,) => {
   };
 
   const component = (
-    <Modal visible={true} onClose={() => {closeModal();}} content={content}/>
+    <Modal type={"Alert"} visible={true} onClose={() => {closeModal();}} content={content}/>
   );
 
   //直接渲染到body下会把root节点覆盖
