@@ -1,35 +1,45 @@
-import React, {useState} from "react";
-import ReactDOM from "react-dom";
-import {Icon, Modal,Button} from "./lib";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {HashRouter as Router, Route, Link} from 'react-router-dom';
+import IconExample from './lib/icon/icon.example';
+import ModalExample from './lib/modal/modal.example';
+import ButtonExample from './lib/button/button.example';
 
 
-const root = document.getElementById("root");
+ReactDOM.render(
+  <Router>
+    <div>
+      <header>
+        <div className="logo">
+          FUI
+        </div>
 
-function Board() {
-
-  const [visible, setVisible] = useState(false);
-
-  return (
-    <div style={{width: "100%", minHeight: "100vh", background: "pink"}}>
-      <Icon name={"quit"} color={"#fff"}/>
-
-      <Button onClick={()=>{
-        console.log(22222222222222)
-      }}>哈哈</Button>
-
-      <button onClick={() => {setVisible(true);}}>click</button>
-      <Modal
-        type={"Alert"}
-        visible={visible}
-        onClose={() => {setVisible(false);}}
-        content={"你是煞笔么？？？"}
-        canModalClose={true}
-      />
-
-      <button onClick={()=>{Modal.Alert("haha")}}>点我</button>
+      </header>
+      <div>
+        <aside>
+          <h2>组件</h2>
+          <ul>
+            <li>
+              <Link to="/icon">Icon</Link>
+            </li>
+            <li>
+              <Link to="/button">Button</Link>
+            </li>
+            <li>
+              <Link to="/dialog">对话框</Link>
+            </li>
+            <li>
+              <Link to="/layout">布局</Link>
+            </li>
+          </ul>
+        </aside>
+        <main>
+          <Route path="/icon" component={IconExample}/>
+          <Route path="/button" component={ButtonExample}/>
+          <Route path="/dialog" component={ModalExample}/>
+          {/*<Route path="/layout" component={LayoutExample}/>*/}
+        </main>
+      </div>
     </div>
-  );
-}
-
-
-ReactDOM.render(<Board/>, root);
+  </Router>
+  , document.querySelector('#root'));
