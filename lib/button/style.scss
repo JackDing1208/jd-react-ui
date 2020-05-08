@@ -1,0 +1,51 @@
+$theme-color:#ff4d4f;
+
+.jd-button{
+  box-sizing: border-box;
+  display: inline-flex;
+  vertical-align: top;
+  height: 32px;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  &:hover{
+    cursor: pointer;
+  }
+  &-text{
+    margin-left: 0.5em;
+  }
+
+  &.square{
+    border-radius: 4px;
+    padding:0 1.5em;
+  }
+  &.round{
+    padding:0 1.5em;
+    border-radius: 32px;
+  }
+
+  &.circle{
+    width: 32px;
+    border-radius: 50%;
+  }
+  &.light{
+    border:1px solid #999;
+    color: #666;
+  }
+  &.light:hover{
+    border-color: $theme-color;
+    color:$theme-color;
+    transition:0.3s;
+  }
+  &.dark{
+    color:#fff;
+    background: $theme-color;
+  }
+  &.dark:hover{
+    border-color: $theme-color;
+    color:#fff;
+    opacity: 0.7;
+    transition:0.3s;
+  }
+
+}
