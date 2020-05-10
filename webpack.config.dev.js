@@ -10,7 +10,7 @@ module.exports = Object.assign({}, base, {  //与基础配置进行组合
     //自动关联HTML用的插件
     new HtmlWebpackPlugin({
       template: 'index.html',
-      title: "Test Page"
+      title: "组件展示"
     })
   ],
 })

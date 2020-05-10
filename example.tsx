@@ -4,7 +4,7 @@ import {HashRouter as Router, Route, Link} from 'react-router-dom';
 import IconExample from './lib/icon/icon.example';
 import ModalExample from './lib/modal/modal.example';
 import ButtonExample from './lib/button/button.example';
-
+import "./example.scss"
 
 ReactDOM.render(
   <Router>
@@ -15,7 +15,7 @@ ReactDOM.render(
         </div>
 
       </header>
-      <div>
+      <div className={"jd-container"}>
         <aside>
           <h2>组件</h2>
           <ul>

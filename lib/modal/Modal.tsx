@@ -1,7 +1,7 @@
 import React, {Fragment} from "react";
 import ReactDOM from "react-dom";
 import "./style.scss";
-
+import {Button} from "../index"
 
 
 interface Props {
@@ -38,7 +38,7 @@ const Modal: ComponentWithFunction = (props) => {
           <header className={"jd-modal-title"}>{props.title}</header>
           <main className={"jd-modal-content"}>{props.content}</main>
           <footer className={"jd-modal-button"}>
-            <button>yes</button>
+            <Button>确定</Button>
             <button onClick={onClickNo}>no</button>
           </footer>
         </div>
