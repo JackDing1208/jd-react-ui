@@ -1,0 +1,17 @@
+.jd-layout {
+  display: flex;
+  flex-direction: column;
+  &-main {
+    flex-grow: 1;
+  }
+  & & {
+    flex-grow: 1;
+    flex-direction: row;
+  }
+  &-hasAside {
+    flex-direction: row;
+    .jd-layout {
+      flex-direction: column;
+    }
+  }
+}
