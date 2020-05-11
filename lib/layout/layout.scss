@@ -13,5 +13,8 @@
     .jd-layout {
       flex-direction: column;
     }
+    .jd-layout.jd-layout-hasAside{
+      flex-direction: row;
+    }
   }
 }

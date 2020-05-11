@@ -1,3 +1,8 @@
 export {default as Icon} from "./icon/Icon"
 export {default as Modal} from "./modal/Modal"
 export {default as Button} from "./button/Button"
+export {default as Layout} from "./layout/Layout"
+export {default as Header} from "./layout/Header"
+export {default as Main} from "./layout/Main"
+export {default as Footer} from "./layout/Footer"
+export {default as Aside} from "./layout/Aside"

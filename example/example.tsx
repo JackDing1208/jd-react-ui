@@ -6,18 +6,20 @@ import ModalExample from '../lib/modal/modal.example';
 import ButtonExample from '../lib/button/button.example';
 import LayoutExample from '../lib/layout/layout.example';
 import "./example.scss"
+import {Layout,Header,Aside,Main,} from "../lib"
+
 
 ReactDOM.render(
 	<Router>
-		<div className={"container"}>
-			<header>
+		<Layout className={"container"}>
+			<Header>
 				<div className="logo">
 					FUI
 				</div>
 			
-			</header>
-			<div>
-				<aside>
+			</Header>
+			<Layout>
+				<Aside>
 					<h2>组件</h2>
 					<ul>
 						<li>
@@ -27,20 +29,21 @@ ReactDOM.render(
 							<Link to="/button">Button</Link>
 						</li>
 						<li>
-							<Link to="/dialog">对话框</Link>
+							<Link to="/layout">Layout</Link>
 						</li>
 						<li>
-							<Link to="/layout">布局</Link>
+							<Link to="/dialog">Modal</Link>
 						</li>
+						
 					</ul>
-				</aside>
-				<main>
+				</Aside>
+				<Main className={"content"}>
 					<Route path="/icon" component={IconExample}/>
 					<Route path="/button" component={ButtonExample}/>
 					<Route path="/dialog" component={ModalExample}/>
 					<Route path="/layout" component={LayoutExample}/>
-				</main>
-			</div>
-		</div>
+				</Main>
+			</Layout>
+		</Layout>
 	</Router>
 	, document.querySelector('#root'));
