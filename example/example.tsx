@@ -6,12 +6,12 @@ import ModalExample from '../lib/modal/modal.example';
 import ButtonExample from '../lib/button/button.example';
 import LayoutExample from '../lib/layout/layout.example';
 import "./example.scss"
-import {Layout,Header,Aside,Main,} from "../lib"
+import {Layout,Header,Aside,Main,Footer} from "../lib"
 
 
 ReactDOM.render(
 	<Router>
-		<Layout className={"container"}>
+		<Layout className={"site-page"}>
 			<Header>
 				<div className="logo">
 					FUI
@@ -44,6 +44,7 @@ ReactDOM.render(
 					<Route path="/layout" component={LayoutExample}/>
 				</Main>
 			</Layout>
+			<Footer>{'&copy'}</Footer>
 		</Layout>
 	</Router>
 	, document.querySelector('#root'));
