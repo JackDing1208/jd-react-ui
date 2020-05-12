@@ -1,6 +1,5 @@
 import React from "react";
 import Button from "./Button";
-import Input from "../input/Input"
 import "./example.scss"
 
 const ButtonExample: React.FunctionComponent = () => {
@@ -18,8 +17,6 @@ const ButtonExample: React.FunctionComponent = () => {
         <Button shape={"round"}>{"点我"}</Button>
         <Button icon={"user"} shape={"circle"}/>
       </div>
-
-      <Input />
     </div>
   );
 };

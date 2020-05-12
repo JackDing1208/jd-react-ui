@@ -34,10 +34,13 @@ ReactDOM.render(
 						<li>
 							<NavLink to="/dialog">弹窗 Modal</NavLink>
 						</li>
-						{/*<li>*/}
-						{/*	<NavLink to="/dialog">表单 Form</NavLink>*/}
-						{/*</li>*/}
-						
+						<li>
+							<NavLink to="/dialog">表单 Form</NavLink>
+						</li>
+						<li>
+							<NavLink to="/dialog">滚动 Scroll</NavLink>
+						</li>
+					
 					</ul>
 				</Aside>
 				<Main className={"site-main"}>
