@@ -8,22 +8,32 @@
   z-index: 999;
   &-dialog{
     position: fixed;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%,-50%);
     background: white;
-    min-height: 20em;
+    min-height: 15em;
     min-width: 20em;
     z-index: 1000;
     display: flex;
     flex-direction: column;
+    border-radius: 4px;
   }
   &-title{
-    height:10px;
-    background: #0074D9;
+    height:30px;
+    border-radius: 4px;
+    background: #fff;
   }
   &-content{
-    flex:1
+    flex:1;
+    padding:8px;
+    border-top:1px solid #EEEEEE;
+    border-bottom:1px solid #EEEEEE;
+  }
+  &-buttons{
+    display: flex;
+    justify-content: center;
+    padding: 8px;
   }
 }
 

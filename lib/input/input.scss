@@ -1,0 +1,14 @@
+@import "../theme";
+.jd-input {
+  border: 1px solid #ddd;
+  line-height: 22px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  box-shadow: 0 0 0 2px fade_out($theme-color, 1);
+  transition: box-shadow 250ms;
+  &:focus {
+    outline: none;
+    border-color: $theme-color;
+    box-shadow: 0 0 0 2px fade_out($theme-color, 0.5);
+  }
+}

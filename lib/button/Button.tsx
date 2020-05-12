@@ -1,11 +1,10 @@
 import React from "react";
 import classes from "../helper/className";
-import "./style.scss";
+import "./button.scss";
 import {Icon} from "../index";
 
 
 interface Props extends React.HTMLAttributes<HTMLDivElement> {
-	color?: string
 	icon?: string
 	type?: string
 	shape?: string
@@ -15,7 +14,7 @@ const Button: React.FunctionComponent<Props> = (props) => {
 	const {onClick, className, icon, type, shape, ...rest} = props;
 	return (
 		<div className={classes("jd-button", className, shape, type)}
-				 onClick={onClick} {...rest}
+				 onClick={onClick}
 				 {...rest}
 		>
 			{icon && <Icon name={icon} size={"1em"}/>}
@@ -29,7 +28,6 @@ const Button: React.FunctionComponent<Props> = (props) => {
 };
 
 Button.defaultProps = {
-	color: "#1890ff",
 	type: "light",
 	shape: "square"
 };
