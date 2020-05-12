@@ -28,7 +28,7 @@ ReactDOM.render(
               <NavLink to="/home">项目介绍</NavLink>
             </li>
             <li>
-              <NavLink to="/button">快速开始</NavLink>
+              <NavLink to="/doc">快速开始</NavLink>
             </li>
           </ul>
           <h2 style={{color: "#00ADB5"}}>组件预览</h2>
