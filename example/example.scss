@@ -67,5 +67,18 @@ body {
   border-top: 1px solid $border-color;
 }
 .example {
-  padding: 16px 0;
+  &-title{
+    color:rgba(0,0,0,0.8);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  &-row{
+    display: flex;
+    align-items: center;
+    padding: 8px;
+  }
+  &-button,&-icon{
+    margin-right: 8px;
+  }
 }
