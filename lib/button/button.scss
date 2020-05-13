@@ -8,9 +8,11 @@
   font-size: 14px;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition:all 0.3s;
 
-  &:hover {
-    cursor: pointer;
+  &:focus {
+    outline: none;
   }
 
   &-text {
@@ -40,7 +42,6 @@
   &.light:hover {
     border-color: $theme-color;
     color: $theme-color;
-    transition: 0.3s;
   }
 
   &.dark {
@@ -51,7 +52,6 @@
   &.dark:hover {
     background:lighten( $theme-color,5%);
     color: #fff;
-    transition: 0.3s;
   }
 
 }

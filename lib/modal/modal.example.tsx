@@ -20,17 +20,17 @@ const ModalExample: React.FunctionComponent = () => {
           className={"example-button"}
           onClick={() => {
           Modal.Alert("快速警告","警告标题")
-        }}>{"快捷显示警告"}</Button>
+        }}>{"调用函数警告"}</Button>
         <Button
           className={"example-button"}
           onClick={() => {
           Modal.Confirm("是不是很方便", "确认标题")
-        }}>{"快捷显示确认"}</Button>
+        }}>{"调用函数确认"}</Button>
         <Button
           className={"example-button"}
           onClick={() => {
           Modal.Input("哈哈", "输入框", (e, text) => {console.log(text)})
-        }}>{"快捷显示输入"}
+        }}>{"调用函数输入"}
         </Button>
       </div>
       <Modal visible={visible1}

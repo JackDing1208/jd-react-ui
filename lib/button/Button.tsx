@@ -4,17 +4,16 @@ import "./button.scss";
 import {Icon} from "../index";
 
 
-interface Props extends React.HTMLAttributes<HTMLDivElement> {
+interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 	icon?: string
-	type?: string
+	fill?: string
 	shape?: string
 }
 
 const Button: React.FunctionComponent<Props> = (props) => {
-	const {onClick, className, icon, type, shape, ...rest} = props;
+	const {className, icon, fill, shape, ...rest} = props;
 	return (
-		<div className={classes("jd-button", className, shape, type)}
-				 onClick={onClick}
+		<button className={classes("jd-button", className, shape, fill)}
 				 {...rest}
 		>
 			{icon && <Icon name={icon} size={"1em"}/>}
@@ -23,12 +22,12 @@ const Button: React.FunctionComponent<Props> = (props) => {
 				{props.children}
       </div>
 			}
-		</div>
+		</button>
 	);
 };
 
 Button.defaultProps = {
-	type: "light",
+	fill: "light",
 	shape: "square"
 };
 

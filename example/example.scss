@@ -19,6 +19,7 @@ body {
 }
 .site-main {
   padding-top: 16px;
+  flex:1
 }
 .site-header {
   background: $border-color;
@@ -45,7 +46,8 @@ body {
     min-width: 12em;
     > li {
       a {
-        color: #333;
+        font-size: 14px;
+        color: rgba(0,0,0,0.8);
         display: block;
         padding: 8px $padding;
         &:hover {

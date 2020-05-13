@@ -5,6 +5,7 @@ import IconExample from '../lib/icon/icon.example';
 import ModalExample from '../lib/modal/modal.example';
 import ButtonExample from '../lib/button/button.example';
 import LayoutExample from '../lib/layout/layout.example';
+import FormExample from '../lib/form/form.example';
 import HomePage from "./homePage"
 import "./example.scss"
 import {Layout, Header, Aside, Main, Footer} from "../lib"
@@ -61,6 +62,7 @@ ReactDOM.render(
           <Route path="/button" component={ButtonExample}/>
           <Route path="/dialog" component={ModalExample}/>
           <Route path="/layout" component={LayoutExample}/>
+          <Route path="/form" component={FormExample}/>
         </Main>
       </Layout>
       <Footer className={"site-footer"}>&copy; Jack Ding</Footer>
