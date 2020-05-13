@@ -50,7 +50,7 @@ ReactDOM.render(
               <NavLink to="/form">表单 Form</NavLink>
             </li>
             <li>
-              <NavLink to="/scroll">滚动 Scroll</NavLink>
+              <NavLink to="/scroll">滚动条 Scroll</NavLink>
             </li>
 
           </ul>

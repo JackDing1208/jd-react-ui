@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Form from './form';
+import Form from './Form';
 import {useState, Fragment} from 'react';
 import Validator, {noError} from './validator';
 import Button from '../button/Button';
@@ -70,6 +70,7 @@ const FormExample: React.FunctionComponent = () => {
   };
   return (
     <div>
+      <p className={"example-title"}>组件展示</p>
       <Form value={formData}
             fields={fields}
             buttons={
