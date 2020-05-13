@@ -40,21 +40,21 @@ const Form: React.FunctionComponent<Props> = (props) => {
   };
   return (
     <form onSubmit={onSubmit}>
-      <table className="fui-form-table">
+      <table className="jd-form-table">
         <tbody>
         {props.fields.map(f =>
-          <tr className={classes('fui-form-tr')} key={f.name}>
-            <td className="fui-form-td">
-              <span className="fui-form-label">{f.label}</span>
+          <tr className={classes('jd-form-tr')} key={f.name}>
+            <td className="jd-form-td">
+              <span className="jd-form-label">{f.label}</span>
             </td>
-            <td className="fui-form-td">
-              <Input className="fui-form-input"
+            <td className="jd-form-td">
+              <Input className="jd-form-input"
                      type={f.input.type}
                      style={{width:props.inputWidth}}
                      value={formData[f.name]}
                      onChange={(e) => onInputChange(f.name, e.target.value)}
               />
-              <div className="fui-form-error">{
+              <div className="jd-form-error">{
                 props.errors[f.name] ?
                   (props.errorsDisplayMode === 'first' ?
                     transformError!(props.errors[f.name][0]) : props.errors[f.name].map(transformError!).join()) :
@@ -63,9 +63,9 @@ const Form: React.FunctionComponent<Props> = (props) => {
             </td>
           </tr>
         )}
-        <tr className="fui-form-tr">
-          <td className="fui-form-td"/>
-          <td className="fui-form-td">
+        <tr className="jd-form-tr">
+          <td className="jd-form-td"/>
+          <td className="jd-form-td">
             {props.buttons}
           </td>
         </tr>
@@ -77,7 +77,7 @@ const Form: React.FunctionComponent<Props> = (props) => {
 
 Form.defaultProps = {
   errorsDisplayMode: 'first',
-  inputWidth:"20em"
+  inputWidth:"200px"
 };
 
 export default Form;
