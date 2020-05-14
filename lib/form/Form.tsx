@@ -10,7 +10,7 @@ export interface FormValue {
 
 interface Props {
   value: FormValue;
-  fields: Array<{ name: string, label: string, input: { type: string } }>;
+  fields: Array<{ name: string, label: string, input: { type: string, icon?: string } }>;
   buttons: ReactFragment;
   onSubmit: React.FormEventHandler<HTMLFormElement>;
   onChange: (value: FormValue) => void;
@@ -50,8 +50,9 @@ const Form: React.FunctionComponent<Props> = (props) => {
             <td className="jd-form-td">
               <Input className="jd-form-input"
                      type={f.input.type}
-                     style={{width:props.inputWidth}}
+                     style={{width: props.inputWidth}}
                      value={formData[f.name]}
+                     icon={f.input.icon}
                      onChange={(e) => onInputChange(f.name, e.target.value)}
               />
               <div className="jd-form-error">{
@@ -77,7 +78,7 @@ const Form: React.FunctionComponent<Props> = (props) => {
 
 Form.defaultProps = {
   errorsDisplayMode: 'first',
-  inputWidth:"200px"
+  inputWidth: "200px"
 };
 
 export default Form;

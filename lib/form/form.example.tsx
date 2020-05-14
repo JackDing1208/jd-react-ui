@@ -28,9 +28,9 @@ const FormExample: React.FunctionComponent = () => {
     password: ''
   });
   const [fields] = useState([
-    {name: 'username', label: '用户名', input: {type: 'text'}},
-    {name: 'email', label: '邮箱', input: {type: 'text'}},
-    {name: 'password', label: '密码', input: {type: 'password'}},
+    {name: 'username', label: '用户名', input: {type: 'text',icon:"user"}},
+    {name: 'email', label: '邮箱', input: {type: 'text',icon:"email"}},
+    {name: 'password', label: '密码', input: {type: 'password',icon:"password"}},
   ]);
   const [errors, setErrors] = useState({});
   const checkName = (username: string) => {

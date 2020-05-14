@@ -4,11 +4,23 @@
   line-height: 22px;
   padding: 4px 8px;
   border-radius: 4px;
+  color:rgba(0,0,0,0.85);
   box-shadow: 0 0 0 2px fade_out($theme-color, 1);
   transition: box-shadow 250ms;
+  &.hasIcon{
+    padding-left: 32px;
+  }
   &:focus {
     outline: none;
     border-color: $theme-color;
     box-shadow: 0 0 0 2px fade_out($theme-color, 0.5);
+  }
+  &-wrapper{
+    position: relative;
+  }
+  &-icon {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%) translateX(8px);
   }
 }
