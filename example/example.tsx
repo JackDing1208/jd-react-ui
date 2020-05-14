@@ -9,6 +9,7 @@ import FormExample from '../lib/form/form.example';
 import ScrollExample from '../lib/scroll/scroll.example';
 import InputExample from "../lib/input/input.example"
 import HomePage from "./homePage"
+import DocPage from "./docPage"
 import "./example.scss"
 import {Layout, Header, Aside, Main, Footer} from "../lib"
 
@@ -63,6 +64,7 @@ ReactDOM.render(
         <Main className={"site-main"}>
           <Redirect path="/" to="/home"/>
           <Route path="/home" component={HomePage}/>
+          <Route path="/doc" component={DocPage}/>
           <Route path="/icon" component={IconExample}/>
           <Route path="/button" component={ButtonExample}/>
           <Route path="/input" component={InputExample}/>

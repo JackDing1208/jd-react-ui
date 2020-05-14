@@ -20,7 +20,7 @@ export default function () {
           <Content className="y">content</Content>
           <Footer className="x">footer</Footer>
         </Layout>
-        <p>带侧边栏布局</p>
+        <p>侧边栏布局1</p>
         <Layout style={{height: 300, width: 500}}>
           <Header className="x">header</Header>
           <Layout>
@@ -29,6 +29,7 @@ export default function () {
           </Layout>
           <Footer className="x">footer</Footer>
         </Layout>
+        <p>侧边栏布局2</p>
         <Layout style={{height: 300, width: 500}}>
           <Aside className="z">aside</Aside>
           <Layout>
