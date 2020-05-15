@@ -7,6 +7,7 @@
   height: 32px;
   font-size: 14px;
   align-items: center;
+  outline: none;
   justify-content: center;
   cursor: pointer;
   transition:all 0.3s;
@@ -45,13 +46,14 @@
   }
 
   &.dark {
+    border-color: transparent;
+    outline: none;
     color: #fff;
     background: $theme-color;
   }
 
   &.dark:hover {
     background:lighten( $theme-color,5%);
-    color: #fff;
   }
 
 }
