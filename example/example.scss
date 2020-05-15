@@ -1,60 +1,96 @@
-* {margin: 0;padding: 0; box-sizing: border-box;}
-*::before {box-sizing: border-box;}
-*::after {box-sizing: border-box;}
-ul, ol {list-style: none;}
-h1, h2, h3, h4, h5, h6 {font-weight: normal;}
-a { text-decoration: none; color: inherit; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before {
+  box-sizing: border-box;
+}
+
+*::after {
+  box-sizing: border-box;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 pre {
   font-family: "Fira Code Medium", Consolas, monospace;
 }
+
 $padding: 16px;
 $main-color: #00ADB5;
 $border-color: #eee;
 body {
   font-size: 16px;
 }
+
 .site-page {
   background: #ffffff;
   min-height: 100vh;
 }
+
 .site-main {
-  padding-top: 16px;
   padding-bottom: 16px;
+  padding-top: 16px;
   padding-right: 16px;
-  flex:1
+  flex: 1
 }
+
 .site-header {
   background: $border-color;
   padding: 8px 0;
+
   .logo {
     padding: 0 $padding;
     display: flex;
     align-items: center;
-    > img {margin-right: 8px;}
+
+    > img {
+      margin-right: 8px;
+    }
+
     > span {
       color: $main-color;
       font-size: 32px;
     }
   }
 }
+
 .site-aside {
   border-right: 1px solid #EEEEEE;
   margin-right: 16px;
+
   h2 {
     padding: $padding;
     font-size: 18px;
   }
+
   ul {
     min-width: 12em;
+
     > li {
       a {
         font-size: 14px;
-        color: rgba(0,0,0,0.8);
+        color: rgba(0, 0, 0, 0.8);
         display: block;
         padding: 8px $padding;
+
         &:hover {
           color: $main-color;
         }
+
         &.active {
           color: white;
           background: $main-color;
@@ -63,6 +99,7 @@ body {
     }
   }
 }
+
 .site-footer {
   text-align: center;
   font-size: 12px;
@@ -70,29 +107,34 @@ body {
   padding: 16px 0;
   border-top: 1px solid $border-color;
 }
+
 .example {
-  &-title{
-    color:rgba(0,0,0,0.8);
+  &-title {
+    color: rgba(0, 0, 0, 0.8);
     font-size: 20px;
     font-weight: 500;
     margin-bottom: 8px;
   }
-  &-home-container{
+
+  &-home-container {
     display: flex;
     flex-direction: column;
-    align-items:center ;
+    align-items: center;
   }
-  &-home-title{
+
+  &-home-title {
     font-size: 24px;
     font-weight: 500;
-    color:rgba(0,0,0,0.8);
+    color: rgba(0, 0, 0, 0.8);
   }
-  &-row{
+
+  &-row {
     display: flex;
     align-items: center;
     padding: 8px;
   }
-  &-button,&-icon{
+
+  &-button, &-icon {
     margin-right: 8px;
   }
 }

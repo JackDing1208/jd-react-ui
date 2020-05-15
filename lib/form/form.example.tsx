@@ -4,6 +4,7 @@ import {useState, Fragment} from 'react';
 import Validator, {noError} from './validator';
 import Button from '../button/Button';
 import Code from "../Code"
+import {Scroll} from "../index"
 
 interface FormValue {
   [K: string]: any
@@ -28,9 +29,9 @@ const FormExample: React.FunctionComponent = () => {
     password: ''
   });
   const [fields] = useState([
-    {name: 'username', label: '用户名', input: {type: 'text',icon:"user"}},
-    {name: 'email', label: '邮箱', input: {type: 'text',icon:"email"}},
-    {name: 'password', label: '密码', input: {type: 'password',icon:"password"}},
+    {name: 'username', label: '用户名', input: {type: 'text', icon: "user"}},
+    {name: 'email', label: '邮箱', input: {type: 'text', icon: "email"}},
+    {name: 'password', label: '密码', input: {type: 'password', icon: "password"}},
   ]);
   const [errors, setErrors] = useState({});
   const checkName = (username: string) => {
@@ -41,7 +42,7 @@ const FormExample: React.FunctionComponent = () => {
   const onSubmit = () => {
     const rules = [
       {key: 'username', required: true},
-      {key: 'username', validator:checkName},
+      {key: 'username', validator: checkName},
       {key: 'username', minLength: 8, maxLength: 16},
       {key: 'username', pattern: /^[A-Za-z0-9]+$/},
       {key: 'password', required: true},
@@ -69,24 +70,27 @@ const FormExample: React.FunctionComponent = () => {
     return map[message];
   };
   return (
-    <div>
-      <p className={"example-title"}>组件展示</p>
-      <Form value={formData}
-            fields={fields}
-            buttons={
-              <Fragment>
-                <Button type="submit" fill="dark" style={{width: "200px"}}>提交</Button>
-              </Fragment>
-            }
-            errors={errors}
-            transformError={transformError}
-            inputWidth={"200px"}
-            onChange={(newValue) => setFormData(newValue)}
-            onSubmit={onSubmit}
-      />
-      <p className={"example-title"}>示例代码</p>
-      <Code code={require('!!raw-loader!./form.example.tsx').default}/>
-    </div>
+    <Scroll style={{width: "100%", height: "100%"}} barVisible={false}>
+
+      <div>
+        <p className={"example-title"}>组件展示</p>
+        <Form value={formData}
+              fields={fields}
+              buttons={
+                <Fragment>
+                  <Button type="submit" fill="dark" style={{width: "200px"}}>提交</Button>
+                </Fragment>
+              }
+              errors={errors}
+              transformError={transformError}
+              inputWidth={"200px"}
+              onChange={(newValue) => setFormData(newValue)}
+              onSubmit={onSubmit}
+        />
+        <p className={"example-title"}>示例代码</p>
+        <Code code={require('!!raw-loader!./form.example.tsx').default}/>
+      </div>
+    </Scroll>
   );
 };
 
