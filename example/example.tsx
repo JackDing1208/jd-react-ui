@@ -15,6 +15,7 @@ import {Layout, Header, Aside, Main, Footer} from "../lib"
 
 
 const Example = () => {
+  console.log("process.env:",process.env);
   return (
     <Router>
       <Layout className={"site-page"}>

@@ -1,4 +1,6 @@
 const path = require("path")
+const webpack= require("webpack")
+
 
 module.exports = {
   //设置入口文件,路径最好加./
