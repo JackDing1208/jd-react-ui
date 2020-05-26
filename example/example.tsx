@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {HashRouter as Router, Route, NavLink, Redirect} from 'react-router-dom';
-import IconExample from '../lib/icon/icon.example';
+
+const IconExample = React.lazy(() => import("../lib/icon/icon.example"));
 import ModalExample from '../lib/modal/modal.example';
 import ButtonExample from '../lib/button/button.example';
 import LayoutExample from '../lib/layout/layout.example';
@@ -61,6 +62,7 @@ const Example = () => {
               </li>
             </ul>
           </Aside>
+          <React.Suspense fallback={<div>loading...</div>}>
           <Main className={"site-main"}>
             <Redirect path="/" to="/home"/>
             <Route path="/home" component={HomePage}/>
@@ -73,6 +75,8 @@ const Example = () => {
             <Route path="/form" component={FormExample}/>
             <Route path="/scroll" component={ScrollExample}/>
           </Main>
+            </React.Suspense>
+
         </Layout>
         <Footer className={"site-footer"}>&copy; Jack Ding</Footer>
       </Layout>
