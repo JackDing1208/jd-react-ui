@@ -1,6 +1,11 @@
 const base = require('./webpack.config')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-module.exports = Object.assign({}, base, {  //与基础配置进行组合
+const webpack= require("webpack")
+
+//与基础配置进行组合
+//特定的配置会覆盖基础配置,基础配置里不要写plugin
+
+module.exports = Object.assign({}, base, {
   mode: 'development',
   entry: {
     index: "./example/example.tsx"
@@ -11,6 +16,11 @@ module.exports = Object.assign({}, base, {  //与基础配置进行组合
     new HtmlWebpackPlugin({
       template: 'index.html',
       title: "JD-React-UI"
+    }),
+    //注入全局环境变量
+    new webpack.DefinePlugin({
+      PRODUCTION: JSON.stringify(true),
+      'process.env': JSON.stringify(process.env.NODE_ENV)
     })
   ],
 })
